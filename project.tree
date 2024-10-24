@@ -1,0 +1,146 @@
+├── .gitignore
+├── AppStack.md
+├── cmd
+├── config
+├── go.mod
+├── go.sum
+├── internal
+│  ├── api
+│  │  └── messages.go
+│  ├── config
+│  ├── db
+│  │  └── sqlite.go
+│  ├── mqtt
+│  └── rvc
+├── LICENSE
+├── pkg
+│  ├── auth
+│  └── canbus
+├── README.md
+├── scripts
+└── web
+  ├── .env
+  ├── .env.example
+  ├── .gitignore
+  ├── .npmrc
+  ├── .prettierignore
+  ├── .prettierrc
+  ├── .svelte-kit
+  │  ├── ambient.d.ts
+  │  ├── generated
+  │  │  ├── client
+  │  │  │  ├── app.js
+  │  │  │  ├── matchers.js
+  │  │  │  └── nodes
+  │  │  │    ├── 0.js
+  │  │  │    ├── 1.js
+  │  │  │    ├── 2.js
+  │  │  │    ├── 3.js
+  │  │  │    ├── 4.js
+  │  │  │    ├── 5.js
+  │  │  │    ├── 6.js
+  │  │  │    └── 7.js
+  │  │  ├── root.js
+  │  │  ├── root.svelte
+  │  │  └── server
+  │  │    └── internal.js
+  │  ├── non-ambient.d.ts
+  │  ├── tsconfig.json
+  │  └── types
+  │    ├── route_meta_data.json
+  │    └── src
+  │      └── routes
+  │        ├── $types.d.ts
+  │        ├── api
+  │        │  └── $types.d.ts
+  │        ├── dashboard
+  │        │  └── $types.d.ts
+  │        └── demo
+  │          ├── $types.d.ts
+  │          ├── lucia
+  │          │  ├── $types.d.ts
+  │          │  └── login
+  │          │    └── $types.d.ts
+  │          └── paraglide
+  │            └── $types.d.ts
+  ├── drizzle.config.js
+  ├── e2e
+  │  └── demo.test.js
+  ├── eslint.config.js
+  ├── frontend.tree
+  ├── jsconfig.json
+  ├── local.db
+  ├── messages
+  │  └── en.json
+  ├── package-lock.json
+  ├── package.json
+  ├── playwright.config.js
+  ├── postcss.config.js
+  ├── project.inlang
+  │  ├── .gitignore
+  │  ├── cache
+  │  │  └── modules
+  │  │    ├── 1nkc5xzakbuv7
+  │  │    ├── 1p8lqorlgekl1
+  │  │    ├── 24t33a883yuxo
+  │  │    ├── 37mhdpvjokwcz
+  │  │    ├── 3l51rujslkmxd
+  │  │    ├── 3sy5er9yssvsx
+  │  │    └── j8uajsc6e0tm
+  │  ├── project_id
+  │  └── settings.json
+  ├── README.md
+  ├── src
+  │  ├── app.css
+  │  ├── app.d.ts
+  │  ├── app.html
+  │  ├── demo.spec.js
+  │  ├── hooks.js
+  │  ├── hooks.server.js
+  │  ├── lib
+  │  │  ├── components
+  │  │  │  ├── Controls.svelte
+  │  │  │  ├── Dashboard.svelte
+  │  │  │  ├── Sidebar.svelte
+  │  │  │  └── SystemStatus.svelte
+  │  │  ├── drizzle.js
+  │  │  ├── i18n.js
+  │  │  ├── index.js
+  │  │  ├── models
+  │  │  │  └── messages.js
+  │  │  ├── paraglide
+  │  │  │  ├── .gitignore
+  │  │  │  ├── .prettierignore
+  │  │  │  ├── messages
+  │  │  │  │  └── en.js
+  │  │  │  ├── messages.js
+  │  │  │  └── runtime.js
+  │  │  ├── server
+  │  │  │  ├── auth.js
+  │  │  │  └── db
+  │  │  │    ├── index.js
+  │  │  │    └── schema.js
+  │  │  └── stores
+  │  │    └── auth.js
+  │  └── routes
+  │    ├── +layout.svelte
+  │    ├── +page.svelte
+  │    ├── api
+  │    │  └── +server.js
+  │    ├── dashboard
+  │    │  └── +page.svelte
+  │    └── demo
+  │      ├── +page.svelte
+  │      ├── lucia
+  │      │  ├── +page.server.js
+  │      │  ├── +page.svelte
+  │      │  └── login
+  │      │    ├── +page.server.js
+  │      │    └── +page.svelte
+  │      └── paraglide
+  │        └── +page.svelte
+  ├── static
+  │  └── favicon.png
+  ├── svelte.config.js
+  ├── tailwind.config.js
+  └── vite.config.js

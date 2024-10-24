@@ -21,5 +21,14 @@
 go.work
 go.work.sum
 
+# Go build files
+/bin/
+/coverage/
+*.test
+
+# Node.js and Svelte files
+/web/node_modules/
+/web/public/build/
+
 # env file
 .env
