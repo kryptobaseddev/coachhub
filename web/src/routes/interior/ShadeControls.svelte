@@ -2,7 +2,7 @@
 
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { ChevronDown, ChevronUp, Maximize2 } from 'lucide-svelte';
+  import { ChevronDown, ChevronUp, Blinds } from 'lucide-svelte';
   import { slide } from 'svelte/transition';
 
   export let shades;
@@ -26,7 +26,7 @@
 <div class="bg-white rounded-lg shadow">
   <div class="p-4 border-b">
     <div class="flex items-center space-x-2">
-      <Maximize2 class="text-purple-500" />
+      <Blinds class="text-purple-500" />
       <h2 class="text-lg font-medium">Window Shades</h2>
     </div>
   </div>
@@ -54,10 +54,11 @@
         
         <div class="space-y-2">
           <div class="flex justify-between">
-            <label class="text-sm text-gray-600">Position</label>
+            <label for="position-{shade.id}" class="text-sm text-gray-600">Position</label>
             <span class="text-sm font-medium">{getPositionLabel(shade.position)}</span>
           </div>
           <input
+            id="position-{shade.id}"
             type="range"
             min="0"
             max="100"

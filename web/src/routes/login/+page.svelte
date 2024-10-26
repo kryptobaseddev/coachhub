@@ -8,6 +8,7 @@
     
     export let form;
     let isLoading = false;
+    let identifier = ''; // This will hold either email or username
   </script>
   
   <div class="min-h-screen flex items-center justify-center bg-gray-100">
@@ -15,7 +16,7 @@
       <Card>
         <form 
           method="POST" 
-          class="space-y-6"
+          class="space-y-4"
           use:enhance={() => {
             isLoading = true;
             return async ({ update }) => {
@@ -25,10 +26,10 @@
           }}
         >
           <div class="text-center">
-            <div class="flex justify-center mb-2">
-              <Icon name="Home" class="h-8 w-8 text-blue-600" />
+            <div class="flex justify-center">
+              <!-- coachub logo -->
+              <img src="/coachhub-logo-ImageLine.svg" alt="Coachub Logo" class="h-auto w-auto" />
             </div>
-            <h1 class="text-2xl font-bold">CoachHub</h1>
             <p class="text-gray-600 mt-2">Enter your credentials to access your motorhome controls</p>
           </div>
   
@@ -39,11 +40,11 @@
           {/if}
   
           <Input
-            label="Email"
-            id="email"
-            type="email"
-            name="email"
-            value={form?.email ?? ''}
+            label="Email or Username"
+            id="identifier"
+            type="text"
+            name="identifier"
+            bind:value={identifier}
             required
           />
   
@@ -65,8 +66,8 @@
   
           <div class="text-center text-sm text-gray-600">
             <p class="font-medium mb-1">Demo credentials:</p>
-            <p>Admin: admin@demo.com / admin</p>
-            <p>User: user@demo.com / user</p>
+            <p>Admin: admin / admin</p>
+            <p>User: user / user</p>
           </div>
         </form>
       </Card>

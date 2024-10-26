@@ -48,8 +48,9 @@
         </div>
         {#if light.state === 'on'}
           <div class="mt-4">
-            <label class="text-sm text-gray-600 block mb-2">Brightness</label>
+            <label for="brightness-{light.id}" class="text-sm text-gray-600 block mb-2">Brightness</label>  
             <input
+              id="brightness-{light.id}"
               type="range"
               min="0"
               max="100"

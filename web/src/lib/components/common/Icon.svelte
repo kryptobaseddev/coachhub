@@ -11,7 +11,9 @@
 
     let IconComponent: typeof SvelteComponent;
 
-    $: IconComponent = LucideIcons[name] as unknown as typeof SvelteComponent;
+    $: {
+        IconComponent = LucideIcons[name] as unknown as typeof SvelteComponent;
+    }
 </script>
 
 {#if IconComponent}

@@ -1,4 +1,6 @@
 // src/lib/demoData.js
+export const isDemoMode = true;
+
 export const demoData = {
     devices: {
       interior: {
@@ -95,14 +97,18 @@ export const demoData = {
     users: [
       {
         id: '1',
+        username: 'admin',
         email: 'admin@demo.com',
+        password: 'admin',
         name: 'Admin User',
         role: 'admin',
         lastLogin: '2024-01-01T12:00:00Z'
       },
       {
         id: '2',
+        username: 'user',
         email: 'user@demo.com',
+        password: 'user',
         name: 'Regular User',
         role: 'user',
         lastLogin: '2024-01-01T12:00:00Z'
@@ -137,7 +143,29 @@ export const demoData = {
       system: {
         timezone: 'America/New_York',
         temperatureUnit: 'F',
-        darkMode: false
+        darkMode: false,
+        security: {
+          requireStrongPasswords: false,
+          passwordExpiration: false,
+          passwordExpirationDays: 30,
+          enableIPWhitelist: false,
+          ipWhitelist: '',
+          enforceHTTPS: false,
+          enableHSTS: false,
+          sessionTimeout: 60,
+          enable2FA: false
+        },
+        systemInfo: {
+          version: '1.0.0',
+          build: '1'
+        },
+        networkInfo: {
+          ddnsProvider: 'No-IP',
+          ddnsHostname: 'yourdomain.ddns.net',
+          ddnsUsername: 'yourusername',
+          ddnsPassword: 'yourpassword',
+          ddnsUpdateInterval: 60
+        }
       }
     }
   };

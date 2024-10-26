@@ -16,24 +16,26 @@
         ${error ? 'border-red-500' : 'border-gray-300'}
         ${$$props.class || ''}
     `;
+    let inputId = `input-${Math.random().toString(36).substr(2, 9)}`;
 </script>
 
 {#if label}
-    <label class="block text-sm font-medium text-gray-700 mb-1">
-        {label}
-        {#if required}
-            <span class="text-red-500">*</span>
-        {/if}
-    </label>
+  <label for={inputId} class="block text-sm font-medium text-gray-700 mb-1">
+    {label}
+    {#if required}
+      <span class="text-red-500">*</span>
+    {/if}
+  </label>
 {/if}
 
 <input
-    {type}
-    bind:value
-    {placeholder}
-    {required}
-    class={inputClasses}
-    {...$$restProps}
+  id={inputId}
+  {type}
+  bind:value
+  {placeholder}
+  {required}
+  class={inputClasses}
+  {...$$restProps}
 />
 
 {#if error}

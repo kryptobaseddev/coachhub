@@ -10,10 +10,13 @@
         CloudSun, 
         Droplet, 
         Bell, 
+        BusFront,
         Settings, 
         Users, 
         Power, 
-        Menu 
+        ThermometerSun,
+        Menu,
+        Zap
     } from 'lucide-svelte';
     
     // Get the user data from server load function
@@ -31,15 +34,15 @@
         { icon: Home, label: 'Dashboard', href: '/dashboard' },
         { icon: Sun, label: 'Interior Devices', href: '/interior' },
         { icon: CloudSun, label: 'Exterior Devices', href: '/exterior' },
-        { icon: Power, label: 'Climate Control', href: '/climate' },
+        { icon: ThermometerSun, label: 'Climate Control', href: '/climate' },
         { icon: Droplet, label: 'Status Panel', href: '/status' },
         { icon: Bell, label: 'Notifications', href: '/notifications' },
     ];
   
     const adminMenuItems = [
         { icon: Settings, label: 'System Config', href: '/admin/system' },
-        { icon: Settings, label: 'Coach Config', href: '/admin/coach' },
-        { icon: Settings, label: 'Automations', href: '/admin/automations' },
+        { icon: BusFront, label: 'Coach Config', href: '/admin/coach' },
+        { icon: Zap, label: 'Automations', href: '/admin/automations' },
         { icon: Users, label: 'User Management', href: '/admin/users' },
     ];
   

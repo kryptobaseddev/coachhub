@@ -1,39 +1,62 @@
 // src/routes/login/+page.server.js
 import { fail, redirect } from '@sveltejs/kit';
-import { demoData } from '$lib/demoData/demoData';
+import { isDemoMode, demoData } from '$lib/demoData/demoData.js';
 
+/** @type {import('./$types').Actions} */
 export const actions = {
-  default: async ({ request, cookies }) => {
+  default: async ({ request, fetch }) => {
+    // console.log('Login action started');
     const data = await request.formData();
-    const email = data.get('email');
+    const identifier = data.get('identifier');
     const password = data.get('password');
 
-    // Demo mode authentication
-    const demoUser = demoData.users.find(u => u.email === email);
-    if (demoUser && 
-        ((email === 'admin@demo.com' && password === 'admin') ||
-         (email === 'user@demo.com' && password === 'user'))) {
-      const session = {
-        id: demoUser.id,
-        email: demoUser.email,
-        name: demoUser.name,
-        role: demoUser.role
-      };
-      
-      cookies.set('session', JSON.stringify(session), {
-        path: '/',
-        httpOnly: true,
-        sameSite: 'strict',
-        secure: process.env.NODE_ENV === 'production',
-        maxAge: 60 * 60 * 24 // 24 hours
-      });
+    // console.log('Received credentials:', { identifier, password: '****' });
 
-      throw redirect(303, '/dashboard');
+    if (!identifier || !password) {
+      // console.log('Missing credentials');
+      return fail(400, { error: 'Missing email/username or password' });
     }
 
-    return fail(400, { 
-      error: 'Invalid credentials',
-      email 
-    });
+    // console.log('isDemoMode:', isDemoMode);
+    if (isDemoMode) {
+      // console.log('Demo data users:', demoData.users);
+      // Demo mode login logic
+      const user = demoData.users.find(u => 
+        (u.email === identifier || u.username === identifier) && u.password === password
+      );
+      
+      // console.log('Found user:', user);
+      if (user) {
+        // Successful login
+        // console.log('Successful login, redirecting to dashboard');
+        throw redirect(303, '/dashboard');
+      } else {
+        // console.log('Invalid credentials in demo mode');
+        return fail(401, { error: 'Invalid credentials' });
+      }
+    } else {
+      // Real login API call
+      // console.log('Attempting real API call');
+      try {
+        const response = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ identifier, password })
+        }).then(res => res.json());
+
+        // console.log('API response:', response);
+        if (response.success) {
+          // Set session, cookies, etc.
+          // console.log('Successful API login, redirecting to dashboard');
+          throw redirect(303, '/dashboard');
+        } else {
+          // console.log('Invalid credentials from API');
+          return fail(401, { error: 'Invalid credentials' });
+        }
+      } catch (error) {
+        // console.error('Login error:', error);
+        return fail(500, { error: 'An unexpected error occurred', details: error.message });
+      }
+    }
   }
 };

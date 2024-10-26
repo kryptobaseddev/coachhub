@@ -79,8 +79,9 @@ Status indicators -->
         {#if thermostat.mode !== 'off'}
           <div class="space-y-4" transition:slide>
             <div>
-              <label class="text-sm text-gray-600 block mb-2">Target Temperature</label>
+              <label for="target-temp-{thermostat.id}" class="text-sm text-gray-600 block mb-2">Target Temperature</label>  
               <input
+                id="target-temp-{thermostat.id}"
                 type="range"
                 min="60"
                 max="85"

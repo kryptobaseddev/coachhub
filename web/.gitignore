@@ -4,7 +4,14 @@ node_modules
 # Output
 .output
 .vercel
-/.svelte-kit
+# Ignore everything in .svelte-kit except the output/client directory
+/.svelte-kit/*
+!/.svelte-kit/output
+/.svelte-kit/output/*
+!/.svelte-kit/output/client
+
+
+
 /build
 
 # OS

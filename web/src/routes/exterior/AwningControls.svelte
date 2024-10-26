@@ -61,10 +61,11 @@ Consistent styling for all controls -->
         
         <div class="space-y-2">
           <div class="flex justify-between">
-            <label class="text-sm text-gray-600">Position</label>
+            <label for="position-{awning.id}" class="text-sm text-gray-600">Position</label>
             <span class="text-sm font-medium">{getPositionLabel(awning.position)}</span>
           </div>
           <input
+            id="position-{awning.id}"
             type="range"
             min="0"
             max="100"

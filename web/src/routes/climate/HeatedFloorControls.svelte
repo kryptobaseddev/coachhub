@@ -51,10 +51,11 @@ Heating status indication -->
         {#if floor.state === 'on'}
           <div class="space-y-2" transition:slide>
             <div class="flex justify-between">
-              <label class="text-sm text-gray-600">Target Temperature</label>
+              <label for="target-temp-{floor.id}" class="text-sm text-gray-600">Target Temperature</label>
               <span class="text-sm font-medium">{floor.targetTemp}°F</span>
             </div>
             <input
+              id="target-temp-{floor.id}"
               type="range"
               min="65"
               max="85"

@@ -52,10 +52,11 @@ Visual feedback -->
         {#if fan.state === 'on'}
           <div class="mt-4 space-y-2">
             <div class="flex justify-between">
-              <label class="text-sm text-gray-600">Fan Speed</label>
+              <label for="fan-speed-{fan.id}" class="text-sm text-gray-600">Fan Speed</label>
               <span class="text-sm font-medium">{speedLabels[fan.speed]}</span>
             </div>
             <input
+              id="fan-speed-{fan.id}"
               type="range"
               min="0"
               max="3"

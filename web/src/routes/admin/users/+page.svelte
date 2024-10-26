@@ -13,6 +13,7 @@
     let users = data.users;
     let searchTerm = '';
     let showUserDialog = false;
+    /** @type {any | null} */
     let editingUser = null;
     let message = '';
 
@@ -107,44 +108,44 @@
 
         <!-- Users Table -->
         <div class="overflow-x-auto">
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Role</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Last Login</th>
-                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Actions</th>
+            <table class="w-full table-auto">
+            <thead class="bg-gray-50">
+                <tr>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Role</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Last Login</th>
+                <th class="px-4 py-2 text-right text-xs font-medium text-gray-500 uppercase">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                {#each filteredUsers as user (user.id)}
+                <tr transition:fade>
+                    <td class="px-4 py-2 whitespace-nowrap">{user.name}</td>
+                    <td class="px-4 py-2 whitespace-nowrap">{user.email}</td>
+                    <td class="px-4 py-2 whitespace-nowrap capitalize">{user.role}</td>
+                    <td class="px-4 py-2 whitespace-nowrap">
+                    {new Date(user.lastLogin).toLocaleString()}
+                    </td>
+                    <td class="px-4 py-2 whitespace-nowrap text-right">
+                    <Button
+                        variant="ghost"
+                        on:click={() => {
+                        editingUser = user;
+                        showUserDialog = true;
+                        }}
+                    >
+                            <Icon name="Edit2" class="h-4 w-4" />
+                        </Button>
+                        <Button
+                            variant="ghost"
+                        on:click={() => handleDeleteUser(user.id)}
+                        >
+                            <Icon name="Trash2" class="h-4 w-4 text-red-500" />
+                        </Button>
+                    </td>
                     </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-                    {#each filteredUsers as user (user.id)}
-                        <tr transition:fade>
-                            <td class="px-6 py-4 whitespace-nowrap">{user.name}</td>
-                            <td class="px-6 py-4 whitespace-nowrap">{user.email}</td>
-                            <td class="px-6 py-4 whitespace-nowrap capitalize">{user.role}</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                {new Date(user.lastLogin).toLocaleString()}
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right">
-                                <Button
-                                    variant="ghost"
-                                    on:click={() => {
-                                        editingUser = user;
-                                        showUserDialog = true;
-                                    }}
-                                >
-                                    <Icon name="Edit2" class="h-4 w-4" />
-                                </Button>
-                                <Button
-                                    variant="ghost"
-                                    on:click={() => handleDeleteUser(user.id)}
-                                >
-                                    <Icon name="Trash2" class="h-4 w-4 text-red-500" />
-                                </Button>
-                            </td>
-                        </tr>
-                    {/each}
+                {/each}
                 </tbody>
             </table>
         </div>
@@ -184,8 +185,9 @@
                 />
                 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700">Role</label>
+                    <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
                     <select 
+                        id="role"
                         name="role"
                         required
                         class="mt-1 w-full p-2 border rounded-md"
@@ -198,6 +200,7 @@
                 
                 <div class="flex justify-end space-x-2 pt-4">
                     <Button
+                        type="button"
                         variant="secondary"
                         on:click={() => {
                             showUserDialog = false;

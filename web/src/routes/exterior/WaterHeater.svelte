@@ -54,8 +54,9 @@ Consistent styling for all controls -->
 
     {#if isActive}
       <div transition:slide>
-        <label class="text-sm text-gray-600 block mb-2">Target Temperature</label>
+        <label for="target-temp-{heater.id}" class="text-sm text-gray-600 block mb-2">Target Temperature</label>
         <input
+          id="target-temp-{heater.id}"
           type="range"
           min="100"
           max="140"

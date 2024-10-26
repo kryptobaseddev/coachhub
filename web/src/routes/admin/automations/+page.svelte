@@ -3,7 +3,7 @@
 <script lang="ts">
   import { isDemoMode } from '$lib/stores/demoMode';
   import { PlusCircle, Play, Pause, Clock, Zap, Settings, Trash2 } from 'lucide-svelte';
-  import { AutomationEditor } from './AutomationEditor.svelte';
+  import AutomationEditor from './AutomationEditor.svelte';
   
   export let data;
   
