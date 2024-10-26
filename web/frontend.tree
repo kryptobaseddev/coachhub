@@ -13,35 +13,289 @@
 │  │  │  └── nodes
 │  │  │    ├── 0.js
 │  │  │    ├── 1.js
+│  │  │    ├── 10.js
+│  │  │    ├── 11.js
+│  │  │    ├── 12.js
+│  │  │    ├── 13.js
+│  │  │    ├── 14.js
+│  │  │    ├── 15.js
 │  │  │    ├── 2.js
 │  │  │    ├── 3.js
 │  │  │    ├── 4.js
 │  │  │    ├── 5.js
 │  │  │    ├── 6.js
-│  │  │    └── 7.js
+│  │  │    ├── 7.js
+│  │  │    ├── 8.js
+│  │  │    └── 9.js
+│  │  ├── client-optimized
+│  │  │  ├── app.js
+│  │  │  ├── matchers.js
+│  │  │  └── nodes
+│  │  │    ├── 0.js
+│  │  │    ├── 1.js
+│  │  │    ├── 10.js
+│  │  │    ├── 11.js
+│  │  │    ├── 12.js
+│  │  │    ├── 13.js
+│  │  │    ├── 14.js
+│  │  │    ├── 15.js
+│  │  │    ├── 2.js
+│  │  │    ├── 3.js
+│  │  │    ├── 4.js
+│  │  │    ├── 5.js
+│  │  │    ├── 6.js
+│  │  │    ├── 7.js
+│  │  │    ├── 8.js
+│  │  │    └── 9.js
 │  │  ├── root.js
 │  │  ├── root.svelte
 │  │  └── server
 │  │    └── internal.js
 │  ├── non-ambient.d.ts
+│  ├── output
+│  │  ├── client
+│  │  │  ├── _app
+│  │  │  │  ├── immutable
+│  │  │  │  │  ├── assets
+│  │  │  │  │  │  ├── _layout.kZoav-VQ.css
+│  │  │  │  │  │  ├── _page.tn0RQdqM.css
+│  │  │  │  │  │  ├── 0.DCYEiknj.css
+│  │  │  │  │  │  └── 5.tn0RQdqM.css
+│  │  │  │  │  ├── chunks
+│  │  │  │  │  │  ├── battery.CBqZfLjW.js
+│  │  │  │  │  │  ├── bell.2awtJ6Ul.js
+│  │  │  │  │  │  ├── blinds.dnOIt88x.js
+│  │  │  │  │  │  ├── Card.BhF9ZHtl.js
+│  │  │  │  │  │  ├── chevron-up.Clfxynmh.js
+│  │  │  │  │  │  ├── circle-alert.BCT1uT6i.js
+│  │  │  │  │  │  ├── class.Cz7S4UMx.js
+│  │  │  │  │  │  ├── demoMode.ClaLBl7d.js
+│  │  │  │  │  │  ├── disclose-version.CJFPsRL-.js
+│  │  │  │  │  │  ├── droplet.lEL7--kX.js
+│  │  │  │  │  │  ├── entry.Dqyu0HAP.js
+│  │  │  │  │  │  ├── event-modifiers.CWmzcjye.js
+│  │  │  │  │  │  ├── fan.CT-BsUfV.js
+│  │  │  │  │  │  ├── footprints.Vo_abwW-.js
+│  │  │  │  │  │  ├── globe.BHFkwUhC.js
+│  │  │  │  │  │  ├── house.C213w7pk.js
+│  │  │  │  │  │  ├── Icon.Bvhz2f0e.js
+│  │  │  │  │  │  ├── Icon.M0zAX6Zb.js
+│  │  │  │  │  │  ├── index-client.Cowl8BPV.js
+│  │  │  │  │  │  ├── index.BJF6aWVF.js
+│  │  │  │  │  │  ├── index.CnPSb7tb.js
+│  │  │  │  │  │  ├── index.D3NlNEen.js
+│  │  │  │  │  │  ├── info.2roawCq9.js
+│  │  │  │  │  │  ├── input.BTYOOzm3.js
+│  │  │  │  │  │  ├── Input.MTiOtp_t.js
+│  │  │  │  │  │  ├── lifecycle.CDJD4jvc.js
+│  │  │  │  │  │  ├── lightbulb.Dzk891xp.js
+│  │  │  │  │  │  ├── mail.BNjh9s9Z.js
+│  │  │  │  │  │  ├── power.CL2wjaEd.js
+│  │  │  │  │  │  ├── props.D6-fppJ3.js
+│  │  │  │  │  │  ├── render.YXdxLiCJ.js
+│  │  │  │  │  │  ├── runtime.CUNFE6o5.js
+│  │  │  │  │  │  ├── select.C4s-v16H.js
+│  │  │  │  │  │  ├── server.DeyZbY8g.js
+│  │  │  │  │  │  ├── settings.BuYUDVRY.js
+│  │  │  │  │  │  ├── shield.e3pJPTNF.js
+│  │  │  │  │  │  ├── store.BcJSs_Hw.js
+│  │  │  │  │  │  ├── stores.D53sJoNF.js
+│  │  │  │  │  │  ├── svelte-component.CIsdkGy0.js
+│  │  │  │  │  │  ├── thermometer-sun.CVsNLU42.js
+│  │  │  │  │  │  ├── thermometer.DXyoWYjY.js
+│  │  │  │  │  │  ├── trash-2.dVfbSBcP.js
+│  │  │  │  │  │  ├── truck.C69z-cVi.js
+│  │  │  │  │  │  ├── umbrella.Cu7e32Qf.js
+│  │  │  │  │  │  ├── users.BX4BJP6J.js
+│  │  │  │  │  │  ├── x.CZYS9xFn.js
+│  │  │  │  │  │  └── zap.BJIn6b88.js
+│  │  │  │  │  ├── entry
+│  │  │  │  │  │  ├── app.Dcfcox-p.js
+│  │  │  │  │  │  └── start.CoHIGTZF.js
+│  │  │  │  │  └── nodes
+│  │  │  │  │    ├── 0.CZFvuk2c.js
+│  │  │  │  │    ├── 1.ltzJnpjQ.js
+│  │  │  │  │    ├── 10.-xvkoNdC.js
+│  │  │  │  │    ├── 11.BCPDdkIt.js
+│  │  │  │  │    ├── 12.BXwuc8yU.js
+│  │  │  │  │    ├── 13.CjyBQdIZ.js
+│  │  │  │  │    ├── 14.DzbXrQgK.js
+│  │  │  │  │    ├── 15.2DmaAgxT.js
+│  │  │  │  │    ├── 2.Bdxwc66i.js
+│  │  │  │  │    ├── 3.CieZuvwb.js
+│  │  │  │  │    ├── 4.qJeEyQjl.js
+│  │  │  │  │    ├── 5.DexbZoLQ.js
+│  │  │  │  │    ├── 6.CtwRWjAJ.js
+│  │  │  │  │    ├── 7.DNB8T19u.js
+│  │  │  │  │    ├── 8.e6IhRL5L.js
+│  │  │  │  │    └── 9.CbBvoeb4.js
+│  │  │  │  └── version.json
+│  │  │  ├── .vite
+│  │  │  │  └── manifest.json
+│  │  │  ├── coachhub-logo-ImageLine.svg
+│  │  │  ├── favicon.ico
+│  │  │  └── favicon.png
+│  │  └── server
+│  │    ├── _app
+│  │    │  └── immutable
+│  │    │    └── assets
+│  │    │      ├── _layout.kZoav-VQ.css
+│  │    │      └── _page.tn0RQdqM.css
+│  │    ├── .vite
+│  │    │  └── manifest.json
+│  │    ├── chunks
+│  │    │  ├── battery.js
+│  │    │  ├── bell.js
+│  │    │  ├── blinds.js
+│  │    │  ├── Card.js
+│  │    │  ├── chevron-up.js
+│  │    │  ├── circle-alert.js
+│  │    │  ├── client.js
+│  │    │  ├── coachConfigs.js
+│  │    │  ├── constants.js
+│  │    │  ├── demoData.js
+│  │    │  ├── demoMode.js
+│  │    │  ├── droplet.js
+│  │    │  ├── equality.js
+│  │    │  ├── exports.js
+│  │    │  ├── fan.js
+│  │    │  ├── footprints.js
+│  │    │  ├── globe.js
+│  │    │  ├── hooks.js
+│  │    │  ├── hooks.server.js
+│  │    │  ├── house.js
+│  │    │  ├── Icon.js
+│  │    │  ├── Icon2.js
+│  │    │  ├── index.js
+│  │    │  ├── index2.js
+│  │    │  ├── index3.js
+│  │    │  ├── index4.js
+│  │    │  ├── info.js
+│  │    │  ├── Input.js
+│  │    │  ├── internal.js
+│  │    │  ├── lightbulb.js
+│  │    │  ├── mail.js
+│  │    │  ├── play.js
+│  │    │  ├── power.js
+│  │    │  ├── server.js
+│  │    │  ├── settings.js
+│  │    │  ├── shield.js
+│  │    │  ├── stores.js
+│  │    │  ├── thermometer-sun.js
+│  │    │  ├── thermometer.js
+│  │    │  ├── trash-2.js
+│  │    │  ├── truck.js
+│  │    │  ├── umbrella.js
+│  │    │  ├── users.js
+│  │    │  └── zap.js
+│  │    ├── entries
+│  │    │  ├── endpoints
+│  │    │  │  └── api
+│  │    │  │    └── _server.js
+│  │    │  ├── fallbacks
+│  │    │  │  ├── error.svelte.js
+│  │    │  │  └── layout.svelte.js
+│  │    │  └── pages
+│  │    │    ├── _layout.server.js
+│  │    │    ├── _layout.svelte.js
+│  │    │    ├── _page.svelte.js
+│  │    │    ├── admin
+│  │    │    │  ├── _layout.server.js
+│  │    │    │  ├── _page.server.js
+│  │    │    │  ├── _page.svelte.js
+│  │    │    │  ├── automations
+│  │    │    │  │  ├── _page.server.js
+│  │    │    │  │  └── _page.svelte.js
+│  │    │    │  ├── coach
+│  │    │    │  │  ├── _page.server.js
+│  │    │    │  │  └── _page.svelte.js
+│  │    │    │  ├── system
+│  │    │    │  │  ├── _page.server.js
+│  │    │    │  │  └── _page.svelte.js
+│  │    │    │  └── users
+│  │    │    │    ├── _page.server.js
+│  │    │    │    └── _page.svelte.js
+│  │    │    ├── climate
+│  │    │    │  ├── _page.server.js
+│  │    │    │  └── _page.svelte.js
+│  │    │    ├── dashboard
+│  │    │    │  ├── _page.server.js
+│  │    │    │  └── _page.svelte.js
+│  │    │    ├── exterior
+│  │    │    │  ├── _page.server.js
+│  │    │    │  └── _page.svelte.js
+│  │    │    ├── interior
+│  │    │    │  ├── _page.server.js
+│  │    │    │  └── _page.svelte.js
+│  │    │    ├── login
+│  │    │    │  ├── _page.server.js
+│  │    │    │  └── _page.svelte.js
+│  │    │    ├── notifications
+│  │    │    │  ├── _page.server.js
+│  │    │    │  └── _page.svelte.js
+│  │    │    └── status
+│  │    │      ├── _page.server.js
+│  │    │      └── _page.svelte.js
+│  │    ├── index.js
+│  │    ├── internal.js
+│  │    ├── manifest-full.js
+│  │    ├── manifest.js
+│  │    ├── nodes
+│  │    │  ├── 0.js
+│  │    │  ├── 1.js
+│  │    │  ├── 10.js
+│  │    │  ├── 11.js
+│  │    │  ├── 12.js
+│  │    │  ├── 13.js
+│  │    │  ├── 14.js
+│  │    │  ├── 15.js
+│  │    │  ├── 2.js
+│  │    │  ├── 3.js
+│  │    │  ├── 4.js
+│  │    │  ├── 5.js
+│  │    │  ├── 6.js
+│  │    │  ├── 7.js
+│  │    │  ├── 8.js
+│  │    │  └── 9.js
+│  │    └── stylesheets
 │  ├── tsconfig.json
 │  └── types
 │    ├── route_meta_data.json
 │    └── src
 │      └── routes
 │        ├── $types.d.ts
+│        ├── admin
+│        │  ├── $types.d.ts
+│        │  ├── automations
+│        │  │  └── $types.d.ts
+│        │  ├── coach
+│        │  │  ├── $types.d.ts
+│        │  │  └── proxy+page.server.js
+│        │  ├── proxy+page.server.js
+│        │  ├── system
+│        │  │  ├── $types.d.ts
+│        │  │  └── proxy+page.server.js
+│        │  └── users
+│        │    ├── $types.d.ts
+│        │    └── proxy+page.server.js
 │        ├── api
 │        │  └── $types.d.ts
-│        ├── dashboard
+│        ├── climate
 │        │  └── $types.d.ts
-│        └── demo
-│          ├── $types.d.ts
-│          ├── lucia
-│          │  ├── $types.d.ts
-│          │  └── login
-│          │    └── $types.d.ts
-│          └── paraglide
-│            └── $types.d.ts
+│        ├── dashboard
+│        │  ├── $types.d.ts
+│        │  └── proxy+page.server.js
+│        ├── exterior
+│        │  └── $types.d.ts
+│        ├── interior
+│        │  └── $types.d.ts
+│        ├── login
+│        │  ├── $types.d.ts
+│        │  └── proxy+page.server.js
+│        ├── notifications
+│        │  └── $types.d.ts
+│        └── status
+│          └── $types.d.ts
 ├── drizzle.config.js
 ├── e2e
 │  └── demo.test.js
@@ -80,10 +334,11 @@
 │  │  ├── actions
 │  │  │  └── automationTypes.js
 │  │  ├── components
-│  │  │  ├── Controls.svelte
-│  │  │  ├── Dashboard.svelte
-│  │  │  ├── Sidebar.svelte
-│  │  │  └── SystemStatus.svelte
+│  │  │  └── common
+│  │  │    ├── Button.svelte
+│  │  │    ├── Card.svelte
+│  │  │    ├── Icon.svelte
+│  │  │    └── Input.svelte
 │  │  ├── demoData
 │  │  │  ├── coachConfigs.js
 │  │  │  └── demoData.js
@@ -108,6 +363,7 @@
 │  │  │    └── schema.js
 │  │  ├── stores
 │  │  │  ├── auth.js
+│  │  │  ├── darkMode.js
 │  │  │  ├── demoMode.js
 │  │  │  ├── devices.js
 │  │  │  └── notifications.js
@@ -119,6 +375,7 @@
 │    ├── admin
 │    │  ├── +layout.server.js
 │    │  ├── +page.server.js
+│    │  ├── +page.svelte
 │    │  ├── automations
 │    │  │  ├── +page.server.js
 │    │  │  ├── +page.svelte
@@ -130,7 +387,7 @@
 │    │  │  ├── +page.server.js
 │    │  │  └── +page.svelte
 │    │  └── users
-│    │    ├── +page.server.js <- Need this file still
+│    │    ├── +page.server.js
 │    │    └── +page.svelte
 │    ├── api
 │    │  └── +server.js
@@ -153,9 +410,8 @@
 │    │  ├── AwningControls.svelte
 │    │  ├── ExteriorLights.svelte
 │    │  └── WaterHeater.svelte
-│    ├── hooks.server.js
 │    ├── interior
-│    │  ├── +page.server.svelte
+│    │  ├── +page.server.js
 │    │  ├── +page.svelte
 │    │  ├── FanControls.svelte
 │    │  ├── LightingControls.svelte
@@ -175,7 +431,10 @@
 │      ├── PowerStatus.svelte
 │      └── TankLevels.svelte
 ├── static
+│  ├── coachhub-logo-ImageLine.svg
+│  ├── favicon.ico
 │  └── favicon.png
 ├── svelte.config.js
 ├── tailwind.config.js
+├── tsconfig.json
 └── vite.config.js
