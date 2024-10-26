@@ -12,8 +12,5 @@ export default defineConfig({
 	],
 	ssr: {
 		noExternal: ['lucide-svelte']
-	},
-	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
 	}
 });
