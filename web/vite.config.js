@@ -10,7 +10,9 @@ export default defineConfig({
 			outdir: './src/lib/paraglide'
 		})
 	],
-
+	ssr: {
+		noExternal: ['lucide-svelte']
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}

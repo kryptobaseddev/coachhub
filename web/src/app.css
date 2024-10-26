@@ -1,13 +1,37 @@
-/* Import Tailwind CSS */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+/* src/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Custom global styles */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    line-height: 1.5;
-    color: #333;
+@layer base {
+    html {
+        @apply antialiased;
+    }
+    
+    body {
+        @apply font-sans text-gray-900 leading-normal bg-gray-50;
+    }
 }
 
-/* You can add more global styles here */
+@layer components {
+    .btn-primary {
+        @apply bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark 
+        transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 
+        focus:ring-primary focus:ring-offset-2;
+    }
+    
+    .btn-secondary {
+        @apply bg-secondary text-white px-4 py-2 rounded-md hover:bg-secondary-dark 
+        transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 
+        focus:ring-secondary focus:ring-offset-2;
+    }
+  
+    .card {
+        @apply bg-white rounded-lg shadow-md p-4;
+    }
+
+    .input-base {
+        @apply w-full px-3 py-2 border border-gray-300 rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    }
+}

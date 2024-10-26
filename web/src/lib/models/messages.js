@@ -1,6 +1,6 @@
 // web/src/lib/models/messages.js
 import { sql } from 'drizzle-orm/sql';
-import { db } from '$lib/server/db'; // Ensure this path is correct
+import { db } from '$lib/server/db';
 
 // Define the messages schema
 export const messages = db.table('messages', {

@@ -77,16 +77,23 @@
 │  ├── hooks.js
 │  ├── hooks.server.js
 │  ├── lib
+│  │  ├── actions
+│  │  │  └── automationTypes.js
 │  │  ├── components
 │  │  │  ├── Controls.svelte
 │  │  │  ├── Dashboard.svelte
 │  │  │  ├── Sidebar.svelte
 │  │  │  └── SystemStatus.svelte
+│  │  ├── demoData
+│  │  │  ├── coachConfigs.js
+│  │  │  └── demoData.js
 │  │  ├── drizzle.js
 │  │  ├── i18n.js
 │  │  ├── index.js
 │  │  ├── models
-│  │  │  └── messages.js
+│  │  │  ├── messages.js
+│  │  │  ├── notifications.js
+│  │  │  └── rvc.js
 │  │  ├── paraglide
 │  │  │  ├── .gitignore
 │  │  │  ├── .prettierignore
@@ -99,25 +106,74 @@
 │  │  │  └── db
 │  │  │    ├── index.js
 │  │  │    └── schema.js
-│  │  └── stores
-│  │    └── auth.js
+│  │  ├── stores
+│  │  │  ├── auth.js
+│  │  │  ├── demoMode.js
+│  │  │  ├── devices.js
+│  │  │  └── notifications.js
+│  │  └── types.js
 │  └── routes
+│    ├── +layout.server.js
 │    ├── +layout.svelte
 │    ├── +page.svelte
+│    ├── admin
+│    │  ├── +layout.server.js
+│    │  ├── +page.server.js
+│    │  ├── automations
+│    │  │  ├── +page.server.js
+│    │  │  ├── +page.svelte
+│    │  │  └── AutomationEditor.svelte
+│    │  ├── coach
+│    │  │  ├── +page.server.js
+│    │  │  └── +page.svelte
+│    │  ├── system
+│    │  │  ├── +page.server.js
+│    │  │  └── +page.svelte
+│    │  └── users
+│    │    ├── +page.server.js <- Need this file still
+│    │    └── +page.svelte
 │    ├── api
 │    │  └── +server.js
+│    ├── climate
+│    │  ├── +page.server.js
+│    │  ├── +page.svelte
+│    │  ├── HeatedFloorControls.svelte
+│    │  ├── ThermostatControls.svelte
+│    │  └── VentFanControls.svelte
 │    ├── dashboard
+│    │  ├── +page.server.js
+│    │  ├── +page.svelte
+│    │  ├── DeviceOverview.svelte
+│    │  ├── NotificationsPanel.svelte
+│    │  ├── QuickActions.svelte
+│    │  └── StatusOverview.svelte
+│    ├── exterior
+│    │  ├── +page.server.js
+│    │  ├── +page.svelte
+│    │  ├── AwningControls.svelte
+│    │  ├── ExteriorLights.svelte
+│    │  └── WaterHeater.svelte
+│    ├── hooks.server.js
+│    ├── interior
+│    │  ├── +page.server.svelte
+│    │  ├── +page.svelte
+│    │  ├── FanControls.svelte
+│    │  ├── LightingControls.svelte
+│    │  └── ShadeControls.svelte
+│    ├── login
+│    │  ├── +page.server.js
 │    │  └── +page.svelte
-│    └── demo
+│    ├── notifications
+│    │  ├── +page.server.js
+│    │  ├── +page.svelte
+│    │  ├── NotificationSettings.svelte
+│    │  └── NotificationsList.svelte
+│    └── status
+│      ├── +page.server.js
 │      ├── +page.svelte
-│      ├── lucia
-│      │  ├── +page.server.js
-│      │  ├── +page.svelte
-│      │  └── login
-│      │    ├── +page.server.js
-│      │    └── +page.svelte
-│      └── paraglide
-│        └── +page.svelte
+│      ├── CoachStatus.svelte
+│      ├── PowerStatus.svelte
+│      └── TankLevels.svelte
 ├── static
 │  └── favicon.png
 ├── svelte.config.js
