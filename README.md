@@ -1,6 +1,6 @@
 # CoachHub
 
-![CoachHub Logo](/assets/CoachHub-Logo/coachhub-logo-ImageLine.svg)
+![CoachHub Logo](/assets/CoachHub-Logo/coachhub-logo-ImageLine.webp){width=300px}
 
 CoachHub is a comprehensive mobile application designed specifically for Tiffin and Vanleigh motorhome owners. It provides a centralized platform for monitoring, controlling, and managing various systems within your RV, enhancing your travel experience and simplifying motorhome management.
 
