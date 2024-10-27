@@ -71,7 +71,7 @@ CoachHub transforms your smartphone into a powerful control center for your Tiff
 
 The navigation bar provides quick access to all primary features of CoachHub.
 
-![Navbar](/assets/appScreenshots/coachhub-admin-navbar.png)
+![Navbar](/assets/appScreenshots/coachhub-navbar-admin.png)
 
 #### Dashboard
 
@@ -101,11 +101,11 @@ Adjust your HVAC settings to maintain a comfortable environment inside your RV.
 
 - **Thermostat - Heating**
 
-  ![Thermostat - Heating](/assets/appScreenshots/coachhub-thermostat-heating.png)
+  ![Thermostat - Heating](/assets/appScreenshots/coachhub-climatecontrol-thermostat-heating.png)
 
 - **Thermostat - Auto**
 
-  ![Thermostat - Auto](/assets/appScreenshots/coachhub-thermostat-auto.png)
+  ![Thermostat - Auto](/assets/appScreenshots/coachhub-climatecontrol-thermostat-auto.png)
 
 #### Notifications
 
