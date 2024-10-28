@@ -15,8 +15,8 @@ export const demoData = {
           { id: 'fan2', name: 'Bedroom Fan', state: 'off', type: 'fan', speed: 0 }
         ],
         shades: [
-          { id: 'shade1', name: 'Living Room Shade', position: 0, type: 'shade' },
-          { id: 'shade2', name: 'Bedroom Shade', position: 0, type: 'shade' }
+          { id: 'shade1', name: 'Living Room Shade', position: 0, type: 'shade', state: 'closed' },
+          { id: 'shade2', name: 'Bedroom Shade', position: 0, type: 'shade', state: 'closed' }
         ]
       },
       exterior: {
@@ -25,7 +25,7 @@ export const demoData = {
           { id: 'ext_light2', name: 'Awning Light', state: 'off', type: 'light', brightness: 0 }
         ],
         awnings: [
-          { id: 'awning1', name: 'Main Awning', position: 0, type: 'awning' }
+          { id: 'awning1', name: 'Main Awning', position: 0, type: 'awning', state: 'closed' }
         ],
         waterHeater: {
           id: 'water_heater1',
@@ -46,6 +46,7 @@ export const demoData = {
             currentTemp: 72,
             targetTemp: 72,
             humidity: 45
+
           }
         ],
         ventFans: [

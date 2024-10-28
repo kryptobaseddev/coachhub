@@ -1,9 +1,11 @@
 // src/routes/notifications/+page.server.js
-import { demoData } from '$lib/demoData/demoData';
+/** @type {import('./$types').PageServerLoad} */
+export async function load({ locals }) {
+  // Access demoData from locals
+  const { demoData } = locals;
 
-export async function load() {
   return {
-    notifications: demoData.notifications,
-    settings: demoData.settings.notifications
+    notifications: demoData?.notifications,
+    settings: demoData?.settings.notifications
   };
 }

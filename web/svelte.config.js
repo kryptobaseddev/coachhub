@@ -1,6 +1,6 @@
 // svelte.config.js
 import adapterNode from '@sveltejs/adapter-node';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,7 +13,7 @@ const config = {
       $models: 'src/lib/models'
     }
   },
-  preprocess: vitePreprocess()
+  preprocess: sveltePreprocess()
 };
 
 export default config;

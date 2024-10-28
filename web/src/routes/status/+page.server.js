@@ -1,8 +1,11 @@
 // src/routes/status/+page.server.js
-import { demoData } from '$lib/demoData/demoData';
+/** @type {import('./$types').PageServerLoad} */
+export async function load({ locals }) {
+  // Access demoMode and demoData directly from locals
+  const { demoMode, demoData } = locals;
 
-export async function load() {
   return {
-    status: demoData.status
+    demoMode,
+    status: demoData?.status || 'Status data not available'  // Provide fallback if demoData is null
   };
 }

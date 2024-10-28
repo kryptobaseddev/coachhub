@@ -9,8 +9,9 @@ Responsive grid layout
 Demo mode support
 Comprehensive system overview -->
 
+<!-- src/routes/status/+page.svelte -->
+
 <script>
-  import { isDemoMode } from '$lib/stores/demoMode';
   import TankLevels from './TankLevels.svelte';
   import PowerStatus from './PowerStatus.svelte';
   import VehicleStatus from './CoachStatus.svelte';
@@ -19,18 +20,20 @@ Comprehensive system overview -->
   export let data;
   const dispatch = createEventDispatcher();
 
-  $: ({ status } = data);
+  // Use `demoMode` and `status` directly from the loaded data
+  let { demoMode, status } = data;
 
   async function handleStatusUpdate(event) {
     const { type, subtype, updates } = event.detail;
     
-    if ($isDemoMode) {
+    if (demoMode) {
+      // Update status locally in demo mode
       status = {
         ...status,
         [type]: {
-          ...status[type],
+          ...(status[type] || {}),
           [subtype]: {
-            ...status[type][subtype],
+            ...(status[type]?.[subtype] || {}),
             ...updates
           }
         }
@@ -53,7 +56,7 @@ Comprehensive system overview -->
 <div class="space-y-6">
   <div class="flex justify-between items-center">
     <h1 class="text-2xl font-bold text-gray-900">System Status</h1>
-    {#if $isDemoMode}
+    {#if demoMode}
       <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Demo Mode</span>
     {/if}
   </div>
