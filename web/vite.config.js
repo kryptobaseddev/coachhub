@@ -14,14 +14,14 @@ export default defineConfig({
   ssr: {
     noExternal: ['lucide-svelte']
   },
-  build: {
-    rollupOptions: {
-      input: {
-        demoData: 'src/lib/demoData/demoData.js',
-        coachConfigs: 'src/lib/demoData/coachConfigs.js',
-        main: 'src/routes/index.svelte',
-        login: 'src/routes/login/+page.svelte'
-      }
-    }
-  }
+  // build: {
+  //   rollupOptions: {
+  //     input: {
+  //       demoData: 'src/lib/demoData/demoData.js',
+  //       coachConfigs: 'src/lib/demoData/coachConfigs.js',
+  //       main: 'src/routes/index.svelte',
+  //       login: 'src/routes/login/+page.svelte'
+  //     }
+  //   }
+  // }
 });
